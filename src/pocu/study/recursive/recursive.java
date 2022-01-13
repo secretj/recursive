@@ -4,11 +4,11 @@ public class recursive {
 
 	public static void main(String[] args) {
 		System.out.println(fibonacci(5));
-		System.out.println(binarySearchRecursive(int arr[]= {1,3,4,6,2,4,10},6 );
+		//System.out.println(binarySearchRecursive(int arr[]= {1,3,4,6,2,4,10},6 );
 
 	}
 
-	// ÇÇº¸³ªÄ¡ ¼ö¿­
+	// í”¼ë³´ë‚˜ì¹˜ ìˆ˜ì—´
 	public static int fibonacci(int n) {
 		if (n <= 1) {
 			return n;
@@ -16,7 +16,7 @@ public class recursive {
 		return fibonacci(n - 1) + fibonacci(n - 2);
 	}
 
-	// ÀüÃ¼ ¼öÀÇ ÇÕÀ» ±¸ÇÏ´Â ²¿¸® Àç±ÍÇÔ¼ö
+	// ì „ì²´ ìˆ˜ì˜ í•©ì„ êµ¬í•˜ëŠ” ê¼¬ë¦¬ ì¬ê·€í•¨ìˆ˜
 	public static int sumTailRecursive(int n, int sum) {
 
 		if (n <= 0) {
@@ -25,7 +25,7 @@ public class recursive {
 		return sumTailRecursive(n - 1, sum + n);
 	}
 
-	// ¹İº¹¹®À¸·Î ¸¸µç ÀÌÁø Å½»ö ¾Ë°í¸®µë
+	// ë°˜ë³µë¬¸ìœ¼ë¡œ ë§Œë“  ì´ì§„ íƒìƒ‰ ì•Œê³ ë¦¬ë“¬
 	public static int binarySearchRecursive(int arr[], int target) {
 		int low = 0;
 		int high = arr.length - 1;
@@ -41,13 +41,13 @@ public class recursive {
 			else
 				low = mid + 1;
 		}
-		return -1; // array¾È¿¡¼­ ¼ıÀÚ¸¦ Ã£Áö ¸øÇß´Ü ÀÇ¹Ì
+		return -1; // arrayì•ˆì—ì„œ ìˆ«ìë¥¼ ì°¾ì§€ ëª»í–ˆë‹¨ ì˜ë¯¸
 	}
 
-	// Àç±ÍÇÔ¼ö¸¦ ÀÌ¿ëÇØ¼­ ¸¸µç ÀÌÁø Å½»ö ¾Ë°í¸®µë
+	// ì¬ê·€í•¨ìˆ˜ë¥¼ ì´ìš©í•´ì„œ ë§Œë“  ì´ì§„ íƒìƒ‰ ì•Œê³ ë¦¬ë“¬
 	public static int binarySearchRecursive2(int nums[], int value, int low, int high) {
 		if (low > high)
-			return -1; // array¾È¿¡¼­ ¼ıÀÚ¸¦ Ã£Áö ¸øÇß´Ü ÀÇ¹Ì
+			return -1; // arrayì•ˆì—ì„œ ìˆ«ìë¥¼ ì°¾ì§€ ëª»í–ˆë‹¨ ì˜ë¯¸
 		int mid = (low + high) / 2;
 		if (nums[mid] == value)
 			return mid;
@@ -57,7 +57,7 @@ public class recursive {
 			return binarySearchRecursive2(nums, value, mid + 1, high);
 	}
 
-	// ¹öºí Á¤·Ä ¾Ë°í¸®µë
+	// ë²„ë¸” ì •ë ¬ ì•Œê³ ë¦¬ë“¬
 	public void bublleSort(int[] nums) {
 			for(int i=0; i<nums.length-1; ++i) {
 				for(int j=0; j<nums.length-i-1; ++j ) {
